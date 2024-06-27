@@ -1,4 +1,3 @@
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -70,10 +69,19 @@ public class Card {
                 valueNumber = 9;
                 break;
             case ZEHN:
-            case BUBE:
-            case DAME:
-            case KOENIG:
                 toString += "10";
+                valueNumber = 10;
+                break;
+            case BUBE:
+                toString += "Bube";
+                valueNumber = 10;
+                break;
+            case DAME:
+                toString += "Dame";
+                valueNumber = 10;
+                break;
+            case KOENIG:
+                toString += "Koenig";
                 valueNumber = 10;
                 break;
         }
