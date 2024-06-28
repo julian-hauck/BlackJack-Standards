@@ -10,6 +10,7 @@ public class Card {
     private Value value;
     private int valueNumber; //bei Ass 1
     private int deck;
+    private String owner = "Croupier"; //Name des Spielers oder "Croupier"
     private String toString;
     private static final ObjectMapper serializer = new ObjectMapper();
 
@@ -106,6 +107,14 @@ public class Card {
 
     public int getDeck() {
         return deck;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 
     public String toJSON() throws JsonProcessingException {
